@@ -60,3 +60,12 @@ function classificateBodyFat(bodyFat, gender) {
 
 }
 */
+
+
+document.getElementById('clear').addEventListener('click', (event) => {
+    Array.from(document.getElementsByTagName('textarea')).forEach(element => {
+        element.value = '';
+    });
+    document.getElementById("checkbox").checked = false;
+
+})

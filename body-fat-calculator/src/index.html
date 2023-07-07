@@ -6,7 +6,7 @@
 
 
     <title>Body Fat Calculator</title>
-    <link rel='stylesheet' href='./style/style.css' />
+    <link rel='stylesheet' href='style.css' />
 </head>
 
 <body>
@@ -29,15 +29,15 @@
                 <div class="gender">
                     <p><label for="switch">Male</label></p>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input id="checkbox" type="checkbox">
                         <span class="slider round"></span>
                     </label>
                     <p><label for="switch">Female</label></p>
                 </div>
 
                 <div class="buttons-container">
-                    <button id='clear' type="button" onclick="alert('Hello world!')">Clear</button>
-                    <button id='calculate' type="button" onclick="alert('Hello world!')">Calculate</button>
+                    <button id='clear' type="button">Clear</button>
+                    <button id='calculate' type="button">Calculate</button>
                 </div>
 
             </div>
@@ -48,7 +48,7 @@
         <div class="results-container"></div>
         <div class="empty-container"></div>
     </div>
-    <script src="./src/app.js">
+    <script src="app.js">
     </script>
 </body>
 

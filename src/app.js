@@ -61,11 +61,24 @@ function classificateBodyFat(bodyFat, gender) {
 }
 */
 
-
 document.getElementById('clear').addEventListener('click', (event) => {
     Array.from(document.getElementsByTagName('textarea')).forEach(element => {
         element.value = '';
     });
     document.getElementById("checkbox").checked = false;
 
+})
+
+document.getElementById('calculate').addEventListener('click', (event) => {
+
+    const gender = document.getElementById('checkbox').checked ? FEMALE : MALE;
+    const height = document.getElementById('height').value;
+    console.log(height);
+    const weight = document.getElementById('weight').value;
+    console.log(weight);
+    const age = document.getElementById('age').value;
+    console.log(age);
+
+    const bodyFatResult = calculateBodyFat(height, weight, age, gender);
+    console.log(bodyFatResult)
 })

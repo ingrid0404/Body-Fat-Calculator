@@ -7,11 +7,13 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow-y: hidden;
 }
 
 .fullsize {
     display: flex;
     height: 100vh;
+
 
 }
 
@@ -19,6 +21,7 @@ html {
 .results-container,
 .empty-container {
     flex: 1;
+
 }
 
 .input-container {
@@ -27,31 +30,130 @@ html {
     align-items: center;
     justify-content: start;
     padding: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.right,
+textarea {
+    font-size: 20px;
+    text-align: start;
+
 }
 
 .right {
     display: flex;
     flex-direction: column;
     color: white;
-    font-size: 20px;
     gap: 30px;
+    border-radius: 8px;
+    border: 2px groove aliceblue;
+    padding: 60px;
+    background-color: #5A96E3;
 
 }
 
 .height,
 .age,
-.weight {
+.weight,
+.buttons-container {
     flex: 1;
     gap: 60px;
-
     display: flex;
     justify-content: space-between;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
 
 
+button:hover {
+    opacity: 0.6
+}
+
+#calculate {
+    background-color: #0A6EBD;
+    color: inherit;
+}
+
+.gender {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: auto 0;
+}
+
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #0A6EBD;
+
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #0A6EBD;
+
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 textarea {
     width: 400px;
+    margin: auto 0;
     resize: none;
 
 }

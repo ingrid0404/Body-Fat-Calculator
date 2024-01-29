@@ -52,6 +52,8 @@ document.getElementById('calculate').addEventListener('click', (event) => {
 
     const bodyFatResult = calculateBodyFat(height, weight, age, gender);
     console.log(bodyFatResult)
+
+    console.log("jenkisn test");
 })
 
 module.exports

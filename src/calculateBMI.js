@@ -6,8 +6,6 @@ const calculateBMI = function (weight, height) {
     let bmi;
     bmi = weight / height / height;
     bmi = bmi * 10000;
-    console.log('bmi')
-    console.log(bmi);
     return bmi;
 }
 module.exports = calculateBMI;
